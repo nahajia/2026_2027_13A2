@@ -1,0 +1,57 @@
+1.
+SELECT varos.vnev,varos.nepesseg,varos.terulet
+from varos
+where varos.vnev like "%ház%";
+
+4.
+SELECT varos.vnev,varos.nepesseg,varos.terulet,megye.mnev
+from varos
+inner join megye
+on varos.megyeid=megye.id
+where varos.vnev like "%ház%";
+
+6.
+select *
+from varos 
+inner join varostipus
+on varostipus.id=varos.vtipid
+where varostipus.vtip="megyei jogú város";
+
+9.
+select AVG(varos.nepesseg)
+from varos 
+inner join megye
+on varos.megyeid=megye.id
+where megye.mnev like "%Szabolcs%"
+
+10.
+select max(varos.terulet)
+from varos 
+inner join megye
+on varos.megyeid=megye.id
+where megye.mnev like "%Somogy%";
+
+ez jó: 
+
+select varos.vnev,  varos.terulet
+from varos 
+inner join megye
+on varos.megyeid=megye.id
+where megye.mnev like "%Somogy%"  
+ORDER BY `varos`.`terulet` DESC
+limit 1;
+
+12.
+select megye.mnev,COUNT(megye.mnev)
+from varos 
+inner join megye
+on varos.megyeid=megye.id  
+GROUP by megye.mnev;
+
+15.
+select varos.vnev,varos.nepesseg
+from varos
+where varos.nepesseg>
+(select avg(varos.nepesseg)
+from varos)  
+ORDER BY `varos`.`nepesseg` ASC
