@@ -1,0 +1,7 @@
+A XAMPP doxnload-ot keresd, windows alá, töltsd le, 
+telepítsd a c: gyökér mappájába.
+ Utána a xampp_control programot kell elinditani, 
+start menünél is megtalálod vagy a mappájában, 
+aztán stratolni a két felsőt: web és mysql szerver, 
+a mysql-nél az Admin ra kattintva behozza 
+a http://localhost/phpmyadmin    -t a böngészőben.

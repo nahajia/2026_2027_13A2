@@ -1,0 +1,25 @@
+SQL SELECT parancs :
+
+SELECT oszlopok	pl. több oszlopnál vessző, aggregáló függvényis lehet, elnevezése: AS név
+FROM táblanév	
+INNER JOIN táblanév 
+ON kapcsolat a két tábla között	kapcsolat: vonal hol megy két tábla között = jel kell közé
+INNER JOIN táblanév 
+ON kapcsolat a két tábla között	
+WHERE feltétel	pl. oszlopnév van benne =, < … BETWEEN, NOT NULL  
+több feltétel összekötése AND vagy OR-al
+GROUP BY oszlopnév 	csoportosítás (ha szerepel, akkor erre valamilyen aggregáló függvényt használunk a Select után)
+HAVING feltétel	a csoportosítás utáni szűrés feltétellel
+ORDER BY oszlopnév 	rendezés  végén ASC ha növekvő, DESC-csökkenő
+LIMIT 1	ennyi sort jelenít meg
+
+
+
+
+
+
+Aggregáló függvények:
+COUNT(id) –darabszám
+SUM(érték)-összeg
+AVG(érték)-átlag
+MIN/MAX(érték)-legkisebb/legnagyobb

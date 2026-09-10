@@ -55,3 +55,50 @@ where varos.nepesseg>
 (select avg(varos.nepesseg)
 from varos)  
 ORDER BY `varos`.`nepesseg` ASC
+
+17.
+select varos.vnev,varos.nepesseg,megye.mnev
+from varos 
+inner join megye 
+on megye.id=varos.megyeid
+where varos.megyeid IN (select varos.megyeid
+from varos 
+where varos.vnev like "%város%")
+
+18.
+SELECT varos.vnev,megye.mnev,varos.nepesseg
+from megye
+INNER JOIN varos
+on megye.id=varos.megyeid
+WHERE varos.megyeid NOT in 
+(SELECT varos.megyeid
+FROM varos
+WHERE varos.vnev like "%falu%") and (varos.nepesseg BETWEEN 10000 and 20000)
+19.
+insert into varos values (null,"Kukutyin",5,2,"k","k",1000,10)
+20.
+update varos set varos.nepesseg=varos.nepesseg*1.1 where varos.vnev like "Kuk%"
+
+21.
+
+DELETE from varos where varos.megyeid in
+(select varos.megyeid
+from varos
+inner join megye
+on varos.megyeid=megye.id
+where megye.mnev="Zala")
+
+
+vagy 
+
+DELETE from varos where varos.megyeid =
+(select megye.id
+from megye
+where megye.mnev="Zala");
+
+22.
+select megye.mnev,COUNT(varos.id)
+from megye
+left join varos
+on megye.id=varos.megyeid
+group by megye.mnev;
