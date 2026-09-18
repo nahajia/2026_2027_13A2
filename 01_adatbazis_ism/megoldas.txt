@@ -102,3 +102,30 @@ from megye
 left join varos
 on megye.id=varos.megyeid
 group by megye.mnev;
+23.
+
+create table hajduvarosok AS
+select varos.vnev
+from varos
+where varos.vnev like "%hajdú%"
+
+24.
+CREATE VIEW nagyvarosok AS
+select varos.id,varos.vnev, varos.nepesseg,varos.terulet, megye.mnev, varostipus.vtip
+from megye
+inner join varos
+on varos.megyeid=megye.id
+inner join varostipus
+on varostipus.id=varos.vtipid
+where varos.nepesseg>50000  
+ORDER BY `varos`.`nepesseg` ASC
+25.
+START TRANSACTION;
+create table seged AS
+select varos.vnev,varos.nepesseg
+from varos
+inner join megye
+on megye.id=varos.megyeid;
+update seged set seged.nepesseg=seged.nepesseg*1.1 where seged.nepesseg>50000;
+update seged set seged.nepesseg=seged.nepesseg*0.9 where seged.nepesseg<=50000;
+commit;
