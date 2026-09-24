@@ -10,6 +10,7 @@ import Hala from './Hala'
 import Stresszoldas from './Stresszoldas'
 import Konyv from './Konyv'
 
+
 const szemely={
   "nev":"Kapros Károly",
   "iskola":"Baross"
