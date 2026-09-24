@@ -18,3 +18,15 @@ ul{
   margin: 20px auto;
   padding: 20px;
 }
+.ketOszlop{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.oszlop{
+  flex:40%;
+  margin:10px;
+  padding:10px;
+  border:2px solid green;
+  box-sizing: border-box;
+}

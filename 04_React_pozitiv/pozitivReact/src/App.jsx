@@ -6,6 +6,9 @@ import './App.css'
 import Keruldel from './Keruldel'
 import HasznosTanacs from './Hasznostanacs'
 import Taplalkozas from './Taplalkozas'
+import Hala from './Hala'
+import Stresszoldas from './Stresszoldas'
+import Konyv from './Konyv'
 
 const szemely={
   "nev":"Kapros Károly",
@@ -43,6 +46,10 @@ function App() {
             <h2>...a boldog élethez :)</h2>
             <img id='vigyorgoKep' src={kep} alt="" />
 
+
+            <Konyv />
+            <Stresszoldas />
+            <Hala />
             <Taplalkozas />
             <HasznosTanacs />
             <Keruldel />
