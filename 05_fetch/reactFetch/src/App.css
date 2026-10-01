@@ -1,0 +1,12 @@
+.haromOszlop{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.oszlop{
+  width: 30%;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  margin: 10px auto 10px auto;
+  padding: 5px;
+}
