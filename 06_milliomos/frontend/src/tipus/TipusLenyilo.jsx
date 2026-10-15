@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 
-const TipusLenyilo=()=>{
+const TipusLenyilo=({tipus_id})=>{
     const [adatok,setAdatok]=useState([])
 
     const letoltes=async ()=>{
@@ -16,13 +16,14 @@ const TipusLenyilo=()=>{
 
     return(
         <div>
-            <select name="" id="">
+            <select name="" id="" onChange={(e)=>tipus_id(e.target.value)}>
                 {adatok.map((elem)=>(
                     <option value={elem.tipus_id} key={elem.tipus_id}>
                         {elem.tipus_nev}
                     </option>
                 ))}
             </select>
+         
         </div>
     )
 }
