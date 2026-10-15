@@ -6,7 +6,8 @@ const Valuta=()=>{
     const letoltes=async ()=>{
         let response=await fetch("https://api.exchangerate-api.com/v4/latest/EUR")
         let data=await response.json()
-        alert(JSON.stringify(data))
+        //alert(JSON.stringify(data))
+        setAdatok(data.rates["HUF"])
     }
 
     useEffect(()=>{
@@ -16,6 +17,7 @@ const Valuta=()=>{
     return(
         <div>
             <p>Euró árfolyama:</p>
+            <p>{adatok} Ft</p>
         </div>
     )
 }

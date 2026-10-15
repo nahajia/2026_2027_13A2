@@ -2,6 +2,8 @@ import { useState } from 'react'
 
 import './App.css'
 import Valuta from './Valuta'
+import Star from './Star'
+import Fordito from './Fordito'
 
 function App() {
 
@@ -14,10 +16,10 @@ function App() {
             <Valuta />
         </div>
         <div className='oszlop'>
-            közép
+            <Star />
         </div>
         <div className='oszlop'>
-            jobb
+            <Fordito/>
         </div>
       </div>
     </div>
