@@ -1,0 +1,20 @@
+Kedvenc zenéidet tárold adatbben, készíts hozzá backend-et, 
+és frontenden jelenitsd meg, majd keress előadóra!
+
+Az együtt írt kódokat használd hozzá!!!!!!!!!!!
+
+1. Hozz létre adatb-t 3 táblával:
+- eloado (eloado_id, eloado_nev, eloado_orszag_id, eloado_stilus_id)
+- orszag (orszag_id, orszag_nev)
+- stilus (stilus_id, stilus_nev)
+
+2. Készíts backendet következő végponttal, teszteld Postmanben:
+- eloadok összes adatának lekérdezése
+
+3. Készíts frontendet React Vite-el, melyben megjelenited dobozokban :
+előadó nevét, országát, stílusát
+
+4. A dobozok szegélyezettek, árnyékoltak legyenek, bennük a 3 adat különböző dizájnú legyen.
+
+5. Felül helyezz el beviteli mezőt és egy Keresés gombot, ha beírnak egy előadót, keresse meg!
+Az előadó nevében való kereséshez készíts backend végpontot, teszteld Postmanben!
