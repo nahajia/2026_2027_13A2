@@ -5,7 +5,7 @@ import Cim from "../Cim"
 import Le from "../assets/le.jpg"
 import Fel from "../assets/fel.jpg"
 
-const BejegyzesLista=({kivalasztott})=>{
+const BejegyzesLista=({kivalasztott,frissit})=>{
     const [adatok,setAdatok]=useState([])
     const [tolt,setTolt]=useState(true)
     const [hiba,setHiba]=useState(false)
@@ -41,7 +41,7 @@ const BejegyzesLista=({kivalasztott})=>{
 
     useEffect(()=>{
         leToltes()
-    },[rendez])
+    },[rendez,frissit])
 
     if (tolt)
         return (
