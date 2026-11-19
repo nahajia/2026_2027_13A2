@@ -70,6 +70,37 @@ app.get('/bejegyzes', async (req, res) => {
         });
     }
 });
+//bejegyzes CSOKKENO
+app.get('/bejegyzesCsokk', async (req, res) => {
+    try {
+        const [result] = await pool.query(`
+            SELECT * 
+            FROM bejegyzes
+            inner join teniszezo
+            on teniszezo.teniszezo_id=bejegyzes.bejegyzes_teniszezo_id
+            order by bejegyzes_id desc
+            `);
+
+        if (result.length === 0) {
+            return res.status(400).json({
+                error: 'Nem található'
+            });
+        }
+
+        res.status(200).json(result);
+
+    } catch (err) {
+        res.status(500).json({
+            error: 'Adatbázis hiba',
+            err
+        });
+    }
+});
+
+
+
+
+
 
 
 // Szerver indítása

@@ -5,6 +5,7 @@
   padding: 10px;
 }
 .bejegyzesDoboz{
+  text-align: left;
   border:1px solid blue;
   margin: 10px;
   padding: 10px;
@@ -12,4 +13,12 @@
 .szoveg{
   font-size: 20px;
   font-family: 'Lucida Sans';
+}
+.datum{
+  color:rgb(75, 148, 124);
+  font-family: Impact;
+}
+.becenev{
+  color:rgb(57, 27, 95);
+  font-family: fantasy;
 }
