@@ -1,0 +1,15 @@
+.doboz{
+  border:1px solid orange;
+  box-shadow: 3px 3px 3px;
+  margin: 10px;
+  padding: 10px;
+}
+.bejegyzesDoboz{
+  border:1px solid blue;
+  margin: 10px;
+  padding: 10px;
+}
+.szoveg{
+  font-size: 20px;
+  font-family: 'Lucida Sans';
+}
